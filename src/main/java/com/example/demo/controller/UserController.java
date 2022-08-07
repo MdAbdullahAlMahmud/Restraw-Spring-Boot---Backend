@@ -5,6 +5,7 @@ import com.example.demo.service.FoodService;
 import com.example.demo.service.UserService;
 import com.example.demo.shared.dto.FoodDto;
 import com.example.demo.shared.dto.UserDto;
+import com.example.demo.ui.model.request.FoodRequestModel;
 import com.example.demo.ui.model.request.UserDetailsRequestModel;
 import com.example.demo.ui.model.response.*;
 import io.swagger.annotations.ApiOperation;
@@ -107,7 +108,7 @@ public class UserController {
 
     //127.0.0.1/users/{id}/address
     @GetMapping(path = "/{id}/foods")
-    public List<FoodRes> getUserAddress(@PathVariable String id){
+    public List<FoodRes> getUserFoods(@PathVariable String id){
         List<FoodRes> foodRes = new ArrayList<>();
 
         List<FoodDto> foodDtos = foodService.getUserFoods(id);
@@ -119,7 +120,7 @@ public class UserController {
         return foodRes;
     }
     @GetMapping(path = "/{id}/foods/{foodId}")
-    public FoodRes getUserAddressById(@PathVariable String foodId){
+    public FoodRes getUserFoodsById(@PathVariable String foodId){
 
         FoodRes foodRes = new FoodRes();
 
@@ -130,4 +131,8 @@ public class UserController {
 
         return foodRes;
     }
+
+
+
+
 }

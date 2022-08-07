@@ -97,4 +97,20 @@ public class UserDto implements Serializable {
     public void setFoods(List<FoodDto> foods) {
         this.foods = foods;
     }
+
+    @Override
+    public String toString() {
+        return "UserDto{" +
+                "id=" + id +
+                ", userId='" + userId + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", encryptedPassword='" + encryptedPassword + '\'' +
+                ", emailVerificationToken='" + emailVerificationToken + '\'' +
+                ", emailVerificationStatus=" + emailVerificationStatus +
+                ", foods=" + foods +
+                '}';
+    }
 }

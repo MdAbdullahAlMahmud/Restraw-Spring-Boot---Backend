@@ -56,4 +56,16 @@ public class FoodDto {
     public void setPrice(Long price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "FoodDto{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", image='" + image + '\'' +
+                ", foodId='" + foodId + '\'' +
+                ", userDetails=" + userDetails +
+                ", price=" + price +
+                '}';
+    }
 }

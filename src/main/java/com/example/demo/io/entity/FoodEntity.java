@@ -11,7 +11,7 @@ public class FoodEntity implements Serializable {
     @GeneratedValue
     private long id;
 
-    @Column(length = 15,nullable = false)
+    @Column(length = 100,nullable = false)
     private String name;
 
     @Column(nullable = false)
@@ -67,7 +67,6 @@ public class FoodEntity implements Serializable {
     public void setUserDetails(UserEntity userDetails) {
         this.userDetails = userDetails;
     }
-
     public double getPrice() {
         return price;
     }
@@ -75,4 +74,5 @@ public class FoodEntity implements Serializable {
     public void setPrice(double price) {
         this.price = price;
     }
+
 }
